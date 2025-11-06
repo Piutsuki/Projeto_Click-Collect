@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Click & Collect — Cliente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cliente.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Click & Collect</h1>
+      <p class="subtitle">Catálogo</p>
+    </div>
+
+    <nav class="top-actions">
+      <div class="toggle-view">
+        <a class="pill active">Visão do Cliente</a>
+        <a class="pill" href="../funcionario/funcionario.html">Visão do Funcionário</a>
+      </div>
+      <a class="cart-btn" href="../carrinho/carrinho.html">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCountHeader" class="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="catalog-header">
+      <h2>Catálogo de Produtos</h2>
+      <p class="muted">Escolha seus produtos para retirada</p>
+    </section>
+
+    <section id="productsGrid" class="products-grid">
+      <!-- cards gerados por cliente.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="muted">Protótipo — Click & Collect</p>
+  </footer>
+
+  <script src="cliente.js"></script>
+  <script>
+    renderProductsPage();
+    updateCartCount();
+  </script>
+</body>
+</html>

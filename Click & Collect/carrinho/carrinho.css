@@ -1,0 +1,31 @@
+:root{
+  --bg:#ffffff; --muted:#8b8b95; --border:#e6e6ea; --accent:#0b0610; --shadow:0 1px 2px rgba(11,6,16,0.04);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:#111;}
+.container{width:1100px; max-width:calc(100% - 40px); margin:36px auto;}
+.topbar{display:flex; justify-content:space-between; align-items:center; padding:20px 28px; border-bottom:1px solid var(--border); background:white; position:sticky; top:0; z-index:10;}
+.brand h1{margin:0; font-size:20px; font-weight:700;}
+.brand .subtitle{margin:3px 0 0; color:var(--muted); font-size:13px}
+.top-actions{display:flex; align-items:center; gap:18px;}
+.pill{background:#f3f4f6; padding:8px 12px; border-radius:12px; font-size:13px; color:#333; text-decoration:none; border:1px solid transparent;}
+.cart-btn{display:flex; gap:8px; align-items:center; text-decoration:none; color:#111; border-radius:8px; padding:6px 10px; border:1px solid var(--border);}
+.cart-count{background:#111; color:white; padding:4px 8px; border-radius:12px; font-size:12px;}
+
+.back-link{display:inline-block; color:var(--muted); margin:16px 0;}
+.cart-panel{margin-top:8px}
+.cart-items{display:flex; flex-direction:column; gap:14px; margin-top:10px}
+.cart-item{display:flex; gap:14px; align-items:flex-start; background:white; border:1px solid var(--border); padding:12px; border-radius:10px;}
+.cart-thumb{width:110px; height:90px; border-radius:8px; background:linear-gradient(180deg,#efeff2,#ececf0); display:flex; align-items:center; justify-content:center; color:#999}
+.cart-info{flex:1}
+.qty-controls{display:flex; align-items:center; gap:8px}
+.qty-controls button{width:30px; height:30px; border-radius:6px; border:1px solid var(--border); background:white; cursor:pointer;}
+.remove-btn{background:#e64557; color:white; border:none; padding:6px 10px; border-radius:6px; margin-left:10px;}
+.cart-summary{margin-top:18px}
+.summary-row{display:flex; justify-content:space-between; align-items:center; padding:12px; border:1px solid var(--border); border-radius:8px;}
+.btn-primary{margin-top:12px; background:var(--accent); color:white; padding:10px 12px; border-radius:8px; border:0; cursor:pointer; font-weight:700;}
+.fullwidth{width:100%; display:block}
+
+/* responsive */
+@media (max-width:900px){ .container{padding:0 12px} }

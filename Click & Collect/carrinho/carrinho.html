@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Click & Collect — Carrinho</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Click & Collect</h1>
+      <p class="subtitle">Protótipo de Sistema</p>
+    </div>
+
+    <nav class="top-actions">
+      <div class="toggle-view">
+        <a class="pill" href="cliente.html">Visão do Cliente</a>
+        <a class="pill" href="funcionario.html">Visão do Funcionário</a>
+      </div>
+      <a class="cart-btn" href="carrinho.html">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCountHeader" class="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="cliente.html">← Voltar aos Produtos</a>
+
+    <section class="cart-panel">
+      <h2>Meu Carrinho</h2>
+      <div id="cartItems" class="cart-items">
+        <!-- Itens do carrinho são renderizados aqui -->
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Total:</span>
+          <strong id="cartTotal">R$ 0.00</strong>
+        </div>
+        <button id="schedulePickupBtn" class="btn-primary fullwidth">Agendar Retirada</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Protótipo de baixa fidelidade - Click & Collect System</p>
+    <p class="muted">Navegue pelos produtos, adicione ao carrinho e agende a retirada na loja</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    renderCartPage();
+    updateCartCount();
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+:root{
+  --bg:#ffffff; --muted:#8b8b95; --card-bg:#f6f6f8;
+  --accent:#0b0610; --pill-bg:#f3f4f6; --border:#e6e6ea;
+  --shadow:0 1px 2px rgba(11,6,16,0.04);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:#111; line-height:1.4;}
+.container{width:1100px; max-width:calc(100% - 40px); margin:36px auto;}
+.topbar{display:flex; justify-content:space-between; align-items:center; padding:20px 28px; border-bottom:1px solid var(--border); background:white; position:sticky; top:0; z-index:10;}
+.brand h1{margin:0; font-size:20px; font-weight:700;}
+.brand .subtitle{margin:3px 0 0; color:var(--muted); font-size:13px}
+.top-actions{display:flex; align-items:center; gap:18px;}
+.toggle-view{display:flex; gap:8px; align-items:center;}
+.pill{background:var(--pill-bg); padding:8px 12px; border-radius:12px; font-size:13px; color:#333; text-decoration:none; border:1px solid transparent;}
+.pill.active{background:white; box-shadow:var(--shadow); border-color:var(--border);}
+.cart-btn{display:flex; gap:8px; align-items:center; text-decoration:none; color:#111; border-radius:8px; padding:6px 10px; border:1px solid var(--border);}
+.cart-count{background:#111; color:white; padding:4px 8px; border-radius:12px; font-size:12px;}
+
+.catalog-header h2{margin:12px 0 4px; font-size:18px;}
+.muted{color:var(--muted); font-size:13px}
+
+.products-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:20px;}
+.card{background:white; border-radius:10px; border:1px solid var(--border); padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px; min-height:360px;}
+.thumb{height:220px; border-radius:8px; background: linear-gradient(180deg,#efeff2,#ececf0); display:flex; align-items:center; justify-content:center; color:#999; font-size:14px; border:1px solid #ececf0;}
+.badge{display:inline-block; background:var(--pill-bg); padding:6px 8px; border-radius:8px; font-size:12px; border:1px solid var(--border);}
+.card .title{font-weight:600; margin-top:6px;}
+.card .price{color:var(--muted); font-size:14px;}
+.btn{margin-top:auto; border:0; padding:10px 12px; border-radius:8px; cursor:pointer; font-weight:600;}
+.btn-add{background:var(--accent); color:white; width:100%;}
+
+/* responsive */
+@media (max-width:900px){ .products-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:600px){
+  .topbar{flex-direction:column; align-items:flex-start; gap:10px}
+  .products-grid{grid-template-columns:1fr}
+  .container{margin:16px}
+}
