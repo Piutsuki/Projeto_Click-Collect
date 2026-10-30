@@ -39,3 +39,7 @@ Use dados fictícios durante demonstrações. Não registre informações reais 
 - `carrinho/`: itens, quantidades, total e criação local de pedidos.
 - `funcionario/`: listagem, busca e atualização de status dos pedidos.
 - `assets/imagens/`: imagens dos produtos de exemplo.
+
+## Origem
+
+Este repositório é um fork de [VictorCardosoPDev/Projeto_Click-Collect](https://github.com/VictorCardosoPDev/Projeto_Click-Collect). Esta documentação descreve os arquivos e o comportamento presentes neste fork.
